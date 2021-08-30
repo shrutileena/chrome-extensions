@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Tab Notes</title>
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            min-width: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+        }
+
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 900;
+        }
+
+        body {
+            background-color: #f7fafc;
+            color: #4a5568;
+        }
+
+        body.dark {
+            color: #f7fafc;
+            background-color: #4a5568;
+        }
+
+        div.main {
+            display: flex;
+            height: 100%;
+        }
+
+        aside.sidebar {
+            width: 300px;
+            background-color: #edf2f7;
+            height: 100%;
+            padding: 25px;
+        }
+
+        .dark aside.sidebar {
+            background-color: #718096;
+        }
+
+        section.holder {
+            width: -webkit-fill-available;
+            height: 100%;
+            padding: 25px;
+        }
+
+        div.icon {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            font-size: 28px;
+        }
+
+        .holder div.icon {
+            cursor: pointer;
+        }
+
+        [contenteditable]:focus {
+            outline: 0px solid transparent;
+        }
+
+        [placeholder]:empty::before {
+            content: attr(placeholder);
+            color: blue;
+            opacity: 0.5;
+            cursor: text;
+        }
+
+        [placeholder]:empty:focus:before {
+            content: empty;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <aside class="sidebar">
+            <div class="icon">&#x1f58a;</div>
+            <h1>New Tab Notes</h1>
+            <div class="neNotes">&#x2795; New Note</div>
+            <div class="pages-holder"></div>
+        </aside>    
+        <section class="holder">
+            <div class="icon">&#x1f4c4;</div>
+            <div class="action">
+                <!---->
+            </div>
+            <h1 contenteditable="true" placeholder="Untitled"></h1>
+            <div class="post-body" contenteditable="true" placeholder="Write your post here..."></div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
