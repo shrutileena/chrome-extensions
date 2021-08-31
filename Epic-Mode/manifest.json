@@ -1,0 +1,13 @@
+{
+    "name": "Epic Mode",
+    "version": "0.01",
+    "description": "",
+    "background": {
+        "page": "background.html",
+        "persistence": false
+    },
+    "chrome_url_overrides": {
+        "newtab": "newtab.html"
+    },
+    "manifest_version": 2
+}
